@@ -1,7 +1,6 @@
 import firebase from 'firebase/app';
 import 'firebase/firestore';
 import 'firebase/auth';
-import { unionWith } from 'eslint-visitor-keys';
 
 const config = {
     apiKey: "AIzaSyBeKkZbBIVUQsbbw8w1W9gCTiDYCtQL_Hc",
