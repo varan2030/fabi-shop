@@ -3,14 +3,14 @@ import React from 'react';
 import './inputpage.styles.scss';
 
 import TextField from '@material-ui/core/TextField';
-import { number, string } from 'prop-types';
+import CustomButton from '../../components/custom-button/custom-button.component';
 
 class InputPage extends React.Component {
     constructor() {
         super();
 
         this.state = {
-            article: '',
+            vendorCode: '',
             model: '',
             sex:['men', 'women', 'children', 'girls', 'boys'],
             season:['winter', 'spring', 'summer', 'demi', 'all season'],
@@ -21,24 +21,36 @@ class InputPage extends React.Component {
     }
 
     handleChange = event => {
+        event.preventDefault();
+        console.log(event.target.value);
        const {value, name} = event.target;
        this.setState({[name]: value})
         console.log(this.state);
     }
 
+    handleSubmit = event => {
+        event.preventDefault()
+    }
+
     render() {
         return (
            <div>
-               <h1>Input page</h1>
+            <h1>Input page</h1>
+            <form onSubmit={this.handleSubmit}>
                <TextField
                     id="standard-name"
-                    name="article"
-                    label="Article"
+                    name="vendorCode"
+                    label="Vendor Code"
                     // className={classes.textField}
-                    value={this.state.article}
+                    value={this.state.vendorCode}
                     onChange={this.handleChange}
                     margin="normal"
+                    required
                 />
+                <CustomButton type='submit'>
+                    SUBMIT
+                </CustomButton>
+            </form>
            </div>
         )
     }
