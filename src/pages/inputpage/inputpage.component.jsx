@@ -30,11 +30,13 @@ class InputPage extends React.Component {
 
     handleSubmit = event => {
         event.preventDefault()
+        // const {vendorCode} = this.state;
+        alert(this.state.vendorCode)
     }
 
     render() {
         return (
-           <div>
+          <div>
             <h1>Input page</h1>
             <form onSubmit={this.handleSubmit}>
                <TextField
@@ -51,7 +53,7 @@ class InputPage extends React.Component {
                     SUBMIT
                 </CustomButton>
             </form>
-           </div>
+            </div>
         )
     }
 }
