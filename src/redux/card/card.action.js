@@ -1,3 +1,5 @@
 import { CardActionTypes } from "./card.types";
 
-export default const 
+export const toggleCardHidden = () => ({
+    type: CardActionTypes.TOGGLE_CARD_HIDDEN
+})
