@@ -1,5 +1,5 @@
 import React from 'react';
-import SptripeCheckout from 'react-stripe-checkout';
+import StripeCheckout from 'react-stripe-checkout';
 
 const StripeCheckoutButton = ({ price }) => {
     const priceForStripe = price * 100;
@@ -11,7 +11,7 @@ const StripeCheckoutButton = ({ price }) => {
     }
 
     return (
-        <SptripeCheckout 
+        <StripeCheckout 
             label="Pay Now"
             name="Fabi Shop"
             billingAddress
